@@ -62,11 +62,13 @@ header{max-height: 100vh; overflow: hidden;}
     max-width: 100%!important;
 } 
 /* burger */
-.fondu{ animation: 0.5s fondu linear;}
+.fondu{ animation: 0.5s fondu linear;
+    background: #fff;}
 @keyframes fondu{
     0% {opacity: 0;}
     100%{opacity: 100;}
 }
+/* .bg-white{background: #fff;} */
 
 #navigation{
     position: fixed;

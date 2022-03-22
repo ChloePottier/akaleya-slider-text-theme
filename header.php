@@ -19,23 +19,24 @@
     <?php wp_body_open();
     if (is_front_page()) : ?>
         <header id='masthead' class='position-relative vh-100 headerimg'>
-    <?php else : ?>
-        <header id='masthead' class='position-relative vh-30 headerimg'>
-    <?php endif; ?>
+        <?php else : ?>
+            <header id='masthead' class='position-relative vh-30 headerimg'>
+            <?php endif; ?>
             <div class='custom-header'>
-                <div class='container-fluid position-absolute zindex-3' >
+                <div class='container-fluid position-fixed zindex-3' id='navbar'>
                     <div class='container text-shadow' id='navbarTop'>
-                    <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
-
+                        <div class='row'>
+                            <div class='col-10 col-lg-5 d-flex flex-row py-2'>
+                                <?php if (function_exists('the_custom_logo')) {
+                                    the_custom_logo();
+                                }
+                                do_action('site_info'); ?>
+                            </div>
+                            <?php
+                            get_template_part('template-parts/navigation/navigation', 'burger'); 
+                            get_template_part('template-parts/navigation/navigation', 'top');?>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-        <div class='container-fluid nav-top bg-white dis-none  position-absolute zindex-3' id='navbar'>
-                <div class='container'>
-                <?php  get_template_part('template-parts/navigation/navigation', 'top'); ?>
-                </div>
-            </div>
-    
-
-    
