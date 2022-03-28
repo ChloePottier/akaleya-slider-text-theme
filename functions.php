@@ -25,11 +25,7 @@ function slider_text_theme_setup(){
                 'height'           => 1200,
                 'flex-height'      => false,
                 'flex-width'       => false,
-            ))
-        
-
-        
-        );
+            )));
     register_default_headers(
         array(
         'default-image' => array(
@@ -116,13 +112,20 @@ function cpt_slider_init() {
         'menu_icon'          => 'dashicons-star-filled',
         'supports'           => array( 'title', 'editor'),
     ); 
-    register_post_type( 'slider', $args );
-    $themelink = get_template_directory_uri();
-    wp_add_inline_style( 'style', ".slider-prev{ { background-image: url(\"{$themelink}\"/images/precedent.png);float:left;}");
-    wp_add_inline_style( 'style', ".slider-next{ { background-image: url(\"{$themelink}\"/images/suivant.png);float:left;}");
-
-    
+    register_post_type( 'slider', $args );    
 } 
+
+if( function_exists('cpt_slider_init')):
+    function slider_add_style() {
+        $themelink = get_template_directory_uri();
+        wp_add_inline_style( 'style' , '@media only screen and (min-width: 576px){.slider-next, .slider-prev{display:block!important; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}');
+        wp_add_inline_style( 'style', "@media only screen and (min-width: 576px){.slider-prev {background-image: url(\"{$themelink}/images/precedent.png\");float:left;}}");
+        wp_add_inline_style( 'style', "@media only screen and (min-width: 576px){.slider-next {background-image: url(\"{$themelink}/images/suivant.png\");float:right;}}");
+
+}
+add_action( 'wp_enqueue_scripts', 'slider_add_style' );
+endif;
+
 function cpt_prestations_init(){
     $labels = array(
         'name'                  => _x('Prestations', 'Post type general name', 'textdomain'),

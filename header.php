@@ -24,7 +24,7 @@
            
             <div class='custom-header'>
                 <div class='container-fluid zindex-3' id='navbar'>
-                    <div class='container text-shadow' id='navbarTop'>
+                    <div class='container' id='navbarTop'>
                         <div class='row'>
                             <div class='col-10 col-lg-5 d-flex flex-row py-2'>
                                 <?php if (function_exists('the_custom_logo')) {
