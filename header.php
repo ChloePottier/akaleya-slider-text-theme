@@ -17,11 +17,13 @@
 
 <body id='top' <?php body_class(); ?>>
     <?php wp_body_open();
-    //if (is_front_page()) : ?>
+    if (is_front_page()) : ?>
 
         <header id='masthead' class='position-relative vh-100 headerimg'>
+       <?php else : ?>
 
-           
+        <header id='masthead' class='position-relative vh-30 headerimg'>
+       <?php endif; ?>
             <div class='custom-header'>
                 <div class='container-fluid zindex-3' id='navbar'>
                     <div class='container' id='navbarTop'>
@@ -40,8 +42,5 @@
                     </div>
                     
                 </div>
-                <div class="container-fluid">
-                <?php  get_template_part('template-parts/header/header','slider'); ?>
-                </div>
-            </div>
-        </header>
+                
+ 
