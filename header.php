@@ -17,13 +17,13 @@
 
 <body id='top' <?php body_class(); ?>>
     <?php wp_body_open();
-    if (is_front_page()) : ?>
+    //if (is_front_page()) : ?>
+
         <header id='masthead' class='position-relative vh-100 headerimg'>
-        <?php else : ?>
-            <header id='masthead' class='position-relative vh-30 headerimg'>
-            <?php endif; ?>
+
+           
             <div class='custom-header'>
-                <div class='container-fluid position-fixed zindex-3' id='navbar'>
+                <div class='container-fluid zindex-3' id='navbar'>
                     <div class='container text-shadow' id='navbarTop'>
                         <div class='row'>
                             <div class='col-10 col-lg-5 d-flex flex-row py-2'>
@@ -34,9 +34,14 @@
                             </div>
                             <?php
                             get_template_part('template-parts/navigation/navigation', 'burger'); 
-                            get_template_part('template-parts/navigation/navigation', 'top');?>
+                            get_template_part('template-parts/navigation/navigation', 'top');
+                           ?>
                         </div>
                     </div>
+                    
+                </div>
+                <div class="container-fluid">
+                <?php  get_template_part('template-parts/header/header','slider'); ?>
                 </div>
             </div>
         </header>

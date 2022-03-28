@@ -20,4 +20,5 @@ get_header(); ?>
         wp_reset_postdata();?>
     </main>
 </div>
-<?php get_footer();
+<?php get_footer();?>
+    <script  src='<?php echo get_template_directory_uri(); ?>/assets/js/slider-header.js' async defer></script>

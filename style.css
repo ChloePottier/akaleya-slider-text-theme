@@ -100,6 +100,14 @@ header{max-height: 100vh; overflow: hidden;}
 .dis-none{display:none!important; visibility: hidden!important;}
 .dis-block{display: block!important; }
 /* .text-shadow{text-shadow:  #727272 2px 2px 3px;} */
+/* SLIDER */
+.slider-nav{box-sizing: content-box;width: 100%;}
+.slider-wrapper,.slider-items{width: 100%; height: auto; padding: 0!important;}
+.slider-items{display: none!important;}
+.slider-items h1{font-size: 4.1rem;}
+.slider-items div p{font-size: 1.3rem; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;}
+.active{display: block!important;}
+.slider-next, .slider-prev{display: none!important;}
 /* content */
 .content-area{height: auto; min-height: 56vh;}
 footer #copyrightinfo{font-size: .8rem!important;}
@@ -123,7 +131,10 @@ overflow-wrap: break-word;}
 @media (min-width: 576px) {
     .row-nav{max-width:540px;}
     #navigation{ padding: 5rem 0 0 20rem; }
-    .bloginfo{margin:auto ; white-space: nowrap;}
+    .slider-content{width: 75%;}
+    .slider-next, .slider-prev{display:block!important; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}
+    .slider-prev{background:url(http://localhost/site-vitrine/wp-content/themes/akaleya-slider-text-theme/images/precedent.png); float:left;}
+    .slider-next{background:url(http://localhost/site-vitrine/wp-content/themes/akaleya-slider-text-theme/images/suivant.png);float:right;}
 }
 @media (min-width: 600px) {
 .coordonnées-société{margin: 1rem 0;}

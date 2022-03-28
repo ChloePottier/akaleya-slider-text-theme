@@ -42,13 +42,6 @@ function slider_text_theme_setup(){
     add_image_size( 'prestations_xl',430, 270, true );
     add_image_size( 'prestations_sm',344, 215, true );
     add_image_size( 'prestations_xs',310, 195, true );
-    add_image_size('header-xs', 575, 575, true);
-    add_image_size('header-s', 767, 767, true);
-    add_image_size('header-m', 991, 991, true);
-    add_image_size('header-l', 1199, 1199, true);
-
-    
-
 }
 
 // Generate inline scripts and styles and attach them to the appropriate script handles.
@@ -63,7 +56,7 @@ function my_inline_scripts() {
 
     // First param should be the handle of your theme stylesheet.
     wp_add_inline_style( 'style', ".headerimg { background-image: url(\"{$image}\"); background-position: top center;
-    background-size: cover;}");
+    background-size: cover; background-attachment:fixed;}");
 }
 add_action( 'wp_enqueue_scripts', 'my_inline_scripts' );
 
@@ -124,6 +117,11 @@ function cpt_slider_init() {
         'supports'           => array( 'title', 'editor'),
     ); 
     register_post_type( 'slider', $args );
+    $themelink = get_template_directory_uri();
+    wp_add_inline_style( 'style', ".slider-prev{ { background-image: url(\"{$themelink}\"/images/precedent.png);float:left;}");
+    wp_add_inline_style( 'style', ".slider-next{ { background-image: url(\"{$themelink}\"/images/suivant.png);float:left;}");
+
+    
 } 
 function cpt_prestations_init(){
     $labels = array(
