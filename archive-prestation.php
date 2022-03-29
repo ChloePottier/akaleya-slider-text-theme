@@ -11,8 +11,8 @@ get_header(); ?>
             <?php if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
                     <div class='col-12 col-md-6 col-lg-4 mt-5'>
-                        <div class='card' >
-                        <?php the_post_thumbnail(); ?>
+                        <div class='card img-prestations' >
+                        <?php the_post_thumbnail('prestations'); ?>
                             <div class='card-body'>
                                 <h4 class='card-title'><?php the_title(); ?></h4>
                                 <?php the_excerpt(); ?>

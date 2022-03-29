@@ -6,7 +6,7 @@ Version:     1.0
 Text Domain:  akaleya-slider-text-theme
 Tags:         website, eco-conception, WordPress, prestations , fast theme, SEO
 */
-#wpadminbar{display: none!important;}
+/* #wpadminbar{display: none!important;} */
 
 body{font-family: Helvetica, Arial, sans-serif;}
 main{min-height:75vh;}
@@ -110,7 +110,9 @@ header{max-height: 100vh; overflow: hidden;}
 .slider-next, .slider-prev{display: none!important;}
 #slider-header .text-shadow{text-shadow:3px 3px 4px black;}
 #slider-header .row{height:90vh;}
-
+/* Prestations */
+/* .img-prestations{height:350px;overflow:hidden;} */
+/* .img-prestations img{} */
 /* content */
 .content-area{height: auto; min-height: 56vh;}
 footer #copyrightinfo{font-size: .8rem!important;}

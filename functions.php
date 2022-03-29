@@ -34,10 +34,8 @@ function slider_text_theme_setup(){
             'description'   => __('Default Header Image', 'light-theme'),
         ),
     ));
-    add_image_size( 'custom_logo_theme',300,80 , array( 'left', 'center' ) );
-    add_image_size( 'prestations_xl',430, 270, true );
-    add_image_size( 'prestations_sm',344, 215, true );
-    add_image_size( 'prestations_xs',310, 195, true );
+    add_image_size( 'custom_logo_theme',299,80 , array( 'left', 'center' ) );
+    add_image_size( 'prestations',575, 431, true );
 }
 
 // Generate inline scripts and styles and attach them to the appropriate script handles.
