@@ -4,6 +4,8 @@
  * @package akaleya-slider-text-theme 
  */
 get_header(); ?>
+</div>
+</header>
 <div id='primary' class='content-area container-fluid bg-white position-relative'>
     <main id='main' class='site-main front-page container py-5' role='main'>
     <?php if ( function_exists('yoast_breadcrumb') ) {
