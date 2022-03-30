@@ -7,7 +7,7 @@ get_header(); ?>
 </div>
 </header>
 <div id='primary' class='content-area container-fluid bg-white position-relative'>
-    <main id='main' class='site-main front-page container py-5' role='main'>
+    <article id='main' class='site-main front-page container py-5' role='main'>
     <?php if ( function_exists('yoast_breadcrumb') ) {
         yoast_breadcrumb( '<nav id="breadcrumbs" itemprop="breadcrumb" class="pb-3">','</nav>' );
         }
@@ -28,7 +28,7 @@ get_header(); ?>
     <?php endwhile;
         endif; 
         wp_reset_postdata();?>
-    </main>
+    </article>
 </div>
 <?php get_footer(); ?>
 
