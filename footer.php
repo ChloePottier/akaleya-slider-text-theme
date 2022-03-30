@@ -11,7 +11,7 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'subfooter-menu','menu_class' => 'menu-subfooter p-0 fs-6','container' => 'nav' ) ); ?>
                 </div>
                 <div class='col-12 col-md-4 text-center' id='copyrightinfo' >
-                    <p class='mb-0'><a href='<?php echo get_home_url(); ?>' class='fw-bold text-black'><?php bloginfo('name'); ?></a> - Copyright © 2022</p>
+                    <p class='mb-0'><a href='<?php echo get_home_url(); ?>' class='site-name fw-bold'><?php bloginfo('name'); ?></a> - Copyright © 2022</p>
                     <p class='akaleya'>Site éco-conçus par <a href='https://akaleya.fr' target='_blank' rel='noreferrer' class='fw-600'>Akaleya</a></p>
                 </div>
 

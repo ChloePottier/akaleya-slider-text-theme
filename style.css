@@ -16,17 +16,17 @@ nav li,#menu-shop li{list-style: none;}
 .box-shadow{box-shadow: .4rem .4rem 1rem #ccc}
 .fw-600,[type='submit'],button,.button,form label{font-weight: 600;}
 .fs-7{font-size: .8rem;}
-.text-uppercase,[type='submit']{text-transform: uppercase;}
+.text-uppercase{text-transform: uppercase;}
 .zindex-1{z-index: 1;}
 .zindex-2{z-index: 20;}
 .zindex-3{z-index: 30;}
 .text-justify{text-align: justify!important;}
 /* Colors */
 a{text-decoration: none!important; color:#727272!important;}
-a:hover,.text-black,.akaleya a:hover,footer nav a,.button:hover{color: #000 !important;}
-.text-grey-dark,.menu a, #burger span{color:#2e2e2e!important;}
+a:hover,.text-black,.akaleya a:hover,footer nav a,.button:hover,footer .site-name{color: #000 !important;}
+.text-grey-dark,.menu a{color:#2e2e2e!important;}
 .akaleya a,footer nav a:hover,[type='submit']:hover, 
-.menu .current-menu-item a,.menu a:hover,#navigation a:hover,.current_page_ancestor a{color: #727272 !important;}
+.menu .current-menu-item a,.menu a:hover,#navigation a:hover,.current_page_ancestor a,footer .site-name:hover{color: #727272 !important;}
 #navigation a,a.btn-blog{color: #fff!important;}
 a.btn-blog{background: #000!important;padding:.5rem;}
 .bg-grey-dark,a.btn-blog:hover{background:#2e2e2e!important;}
@@ -40,6 +40,8 @@ form, input[type='submit'],input[type='text'],input[type='email'], textarea, for
 input, textarea{border:none; margin-bottom: 1rem;border-radius: 0px!important;}
 textarea{height:8rem;}
 [type='submit'],button,.button{background: #fff;;border: #ccc solid 1px; padding:.8rem;color: #000;}
+/* SPACING */
+.mt-1rem,[type='submit']{margin-top:1rem;}
 /* header */
 .row-nav{width: 100%;}
 .sub-menu{display: none!important;}
@@ -88,7 +90,7 @@ header{max-height: 100vh; overflow: hidden;}
 .display-flex{display: flex; flex-direction: column;}
 .display-flex2{display: flex;}
 .burger span:last-child {margin-bottom:0px;}
-.isclosed{transform: none;width: 35px;height: 4px;display: block;margin-bottom: 6px;}
+.isclosed{transform: none;width: 35px;height: 4px;display: block;margin-bottom: 6px;background:#2e2e2e;}
 .isopen{color: #fff!important;}
 .isopen-burger1,.isopen-popup1{transform: skew(5deg) translateY(12px) rotate(45deg);}
 .isopen-burger2{display: none;}
