@@ -22,12 +22,8 @@ get_header(); ?>
                     </div>
                 </section>
                 <div id='nav-faq' class='d-flex justify-content-between pt-5'>
-                    <div>
-                    <?php next_post_link('%link', '&lsaquo; %title'); ?>
-                    </div>
-                    <div>
-                    <?php previous_post_link('%link','%title &rsaquo;'); ?>
-                    </div>
+                    <div> <?php next_post_link('%link', '&lsaquo; %title'); ?></div>
+                    <div><?php previous_post_link('%link','%title &rsaquo;'); ?></div>
                 </div>
     <?php endwhile;
         endif; 

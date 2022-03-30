@@ -61,17 +61,14 @@ function slider_text_theme_site_info() {
     if($name != '' OR $description != ''):
         echo '<div class="bloginfo">';
         if($name != ''):
-            echo '<h2 class="name-h2">'.$name.'</h2>';
-        endif;
-    
-        
+            echo '<h1 class="name-h2">'.$name.'</h1>';
+        endif;  
         if($description != ''):
-            echo '<h3 class="description-h3 mb-0">'.$description.'</h3>';
+            echo '<h2 class="description-h3 mb-0">'.$description.'</h2>';
         endif;
         echo '</div>';
     endif;
 }
-
 function wpm_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml';
     $mime_types['webp'] = 'image/webp';
@@ -116,12 +113,11 @@ function cpt_slider_init() {
 if( function_exists('cpt_slider_init')):
     function slider_add_style() {
         $themelink = get_template_directory_uri();
-        wp_add_inline_style( 'style' , '@media only screen and (min-width: 576px){.slider-next, .slider-prev{display:block!important; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}');
-        wp_add_inline_style( 'style', "@media only screen and (min-width: 576px){.slider-prev {background-image: url(\"{$themelink}/images/precedent.png\");float:left;}}");
-        wp_add_inline_style( 'style', "@media only screen and (min-width: 576px){.slider-next {background-image: url(\"{$themelink}/images/suivant.png\");float:right;}}");
-
-}
-add_action( 'wp_enqueue_scripts', 'slider_add_style' );
+        wp_add_inline_style('style', '@media only screen and (min-width: 576px){.slider-next, .slider-prev{display:block!important; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}');
+        wp_add_inline_style('style', "@media only screen and (min-width: 576px){.slider-prev {background-image: url(\"{$themelink}/images/precedent.png\");float:left;}}");
+        wp_add_inline_style('style', "@media only screen and (min-width: 576px){.slider-next {background-image: url(\"{$themelink}/images/suivant.png\");float:right;}}");
+    }
+    add_action( 'wp_enqueue_scripts', 'slider_add_style' );
 endif;
 
 function cpt_prestations_init(){

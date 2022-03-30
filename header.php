@@ -10,7 +10,6 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
-    <meta name='theme-color' media='(prefers-color-scheme: light)' content='white'>
     <?php get_template_part('google.php');
     wp_head(); ?>
 </head>
@@ -25,7 +24,7 @@
         <header id='masthead' class='position-relative vh-30 headerimg'>
        <?php endif; ?>
             <div class='custom-header'>
-                <div class='container-fluid zindex-3' id='navbar'>
+                <section class='container-fluid zindex-3' id='navbar'>
                     <div class='container' id='navbarTop'>
                         <div class='row'>
                             <div class='col-10 col-lg-5 d-flex flex-row py-2'>
@@ -39,8 +38,7 @@
                             get_template_part('template-parts/navigation/navigation', 'top');
                            ?>
                         </div>
-                    </div>
-                    
-                </div>
+                    </div>                    
+                </section>
                 
  

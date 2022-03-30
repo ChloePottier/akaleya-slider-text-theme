@@ -5,19 +5,21 @@ get_header(); ?>
 </div>
 </header>
 <div id='archive-prestations' class='content-area container-fluid pb-5 bg-white position-relative'>
-    <main id='main' class='site-main container position-relative' role='main'>
+    <secttion id='main' class='site-main container position-relative' role='main'>
     <div class='row mb-5'>
     <h1 class='py-5'>Prestations</h1>
             <?php if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
                     <div class='col-12 col-md-6 col-lg-4 mt-5'>
-                        <div class='card img-prestations' >
-                        <?php the_post_thumbnail('prestations'); ?>
-                            <div class='card-body'>
-                                <h4 class='card-title'><?php the_title(); ?></h4>
-                                <?php the_excerpt(); ?>
-                                <a href='<?php echo esc_url(get_permalink( ))?>'target='_blank' rel='bookmark'>Lire la suite...</a>
+                        <div class='img-prestations' >
+                            <a href='<?php echo esc_url(get_permalink( ))?>' target='_blank' rel='bookmark'>
+                                <?php the_post_thumbnail('prestations'); ?>
+                            </a>
+                            <div class='prestations-body'>
+                                <h4 class='prestations-title mt-3'><?php the_title(); ?></h4>
+                                <?php the_excerpt(); ?>                                
                             </div>
+                            
                         </div>
                     </div>
             <?php endwhile;
@@ -27,6 +29,6 @@ get_header(); ?>
             endif; 
             wp_reset_postdata();?>
     </div>
-    </main>
+        </section>
 </div>
 <?php get_footer();

@@ -8,7 +8,7 @@
         get_template_part('template-parts/header/header', 'slider'); ?>
     </div>
 </header>
-<div id='primary' class='content-area container-fluid bg-white position-relative'>
+<div id='primary' class='content-area container-fluid  position-relative'>
     <main id='main' class='site-main front-page container py-5' role='main'>
         <?php if (have_posts()) :
             while (have_posts()) : the_post(); ?>
