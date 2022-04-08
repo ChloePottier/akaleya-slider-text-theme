@@ -47,7 +47,6 @@ function my_inline_scripts() {
     if ( ! $image ) {
         return;
     }
-
     // First param should be the handle of your theme stylesheet.
     wp_add_inline_style( 'style', ".headerimg { background-image: url(\"{$image}\"); background-position: top center;
     background-size: cover; background-attachment:fixed;}");
