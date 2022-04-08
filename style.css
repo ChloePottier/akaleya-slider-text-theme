@@ -113,6 +113,7 @@ header{max-height: 100vh; overflow: hidden;}
 #slider-header .row{height:90vh;}
 /* Prestations */
 .img-prestations a{display:block; height:auto;}
+.img-prestations img{width:100%;height:auto;}
 /* .img-prestations a:hover{background-color: #000    ;} */
 /* content */
 .content-area{height: auto; min-height: 56vh;}

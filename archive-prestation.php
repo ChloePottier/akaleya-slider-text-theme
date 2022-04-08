@@ -13,7 +13,7 @@ get_header(); ?>
                     <div class='col-12 col-md-6 col-lg-4 mt-5'>
                         <div class='img-prestations' >
                             <a href='<?php echo esc_url(get_permalink( ))?>' target='_blank' rel='bookmark'>
-                                <?php the_post_thumbnail('prestations'); ?>
+                                <?php the_post_thumbnail(); ?>
                             </a>
                             <div class='prestations-body'>
                                 <h4 class='prestations-title mt-3'><?php the_title(); ?></h4>
