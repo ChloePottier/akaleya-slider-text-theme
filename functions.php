@@ -175,14 +175,15 @@ function prestations_loop_shortcode($atts){
     );
     $loop_tem = new  WP_Query($args);
     while ($loop_tem->have_posts()) : $loop_tem->the_post();
-        $output .= '<div class="prestations-items col-12 col-md-6 col-lg-4">' .
-            '<h4>' . get_the_title() . '</h4>' .
-            '<p>' . get_the_excerpt() . '</p>' .
+        $output .= '<div class="prestations-items col-12 col-md-6 col-lg-4 pb-3"><a href="'.get_permalink().'">' .
             get_the_post_thumbnail('', 'prestations', array( 'class' => 'responsive' )).
+            '</a><h4 class="mt-3">' . get_the_title() . '</h4>' .
+            '<p>' . get_the_excerpt() . '</p>' .
+            
             '</div>';
     endwhile;
     wp_reset_query();
     $output .= '</div>';
     return $output;
 }
-add_shortcode('prestationsLoop', 'prestations_loop_shortcode');
+

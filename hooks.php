@@ -12,3 +12,4 @@ add_action('shutdown', function() {
 });
 
 add_action('site_info', 'slider_text_theme_site_info');
+add_shortcode('prestationsLoop', 'prestations_loop_shortcode');
