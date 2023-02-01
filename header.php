@@ -18,13 +18,13 @@
     <?php wp_body_open();
     if (is_front_page()) : ?>
 
-        <header id='masthead' class='position-relative vh-100 headerimg'>
-       <?php else : ?>
+        <header id='masthead' class='position-relative vh-100'>
+        <?php else : ?>
 
-        <header id='masthead' class='position-relative vh-30 headerimg'>
-       <?php endif; ?>
-            <div class='custom-header'>
-                <section class='container-fluid zindex-3' id='navbar'>
+            <header id='masthead' class='position-relative vh-30 '>
+            <?php endif; ?>
+            <div class='custom-header position-relative'>
+                <section class='container-fluid position-absolute zindex-3' id='navbar'>
                     <div class='container' id='navbarTop'>
                         <div class='row'>
                             <div class='col-10 col-lg-4 d-flex flex-row py-2'>
@@ -34,11 +34,13 @@
                                 do_action('site_info'); ?>
                             </div>
                             <?php
-                            get_template_part('template-parts/navigation/navigation', 'burger'); 
+                            get_template_part('template-parts/navigation/navigation', 'burger');
                             get_template_part('template-parts/navigation/navigation', 'top');
-                           ?>
+                            ?>
                         </div>
-                    </div>                    
+                    </div>
                 </section>
-                
- 
+                <?php get_template_part('template-parts/header/header', 'slider');  ?>
+                <div class="custom-header-media position-relative zindex-1">
+                    <?php the_custom_header_markup(); ?>
+                </div>

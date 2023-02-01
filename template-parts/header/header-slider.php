@@ -1,4 +1,4 @@
-<div class='container-fluid'>
+<div class='container-fluid position-absolute zindex-2'>
     <div class='container' id='slider-header'>
         <div class='row'>
             <!-- Conteneur du slider -->

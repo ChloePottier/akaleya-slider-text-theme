@@ -5,7 +5,7 @@
  * @package akaleya-slider-text-theme 
  */
         get_header();
-        get_template_part('template-parts/header/header', 'slider'); ?>
+        ?>
     </div>
 </header>
 <div id='primary' class='content-area container-fluid  position-relative'>
