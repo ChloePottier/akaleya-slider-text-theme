@@ -43,17 +43,6 @@ function slider_text_theme_setup(){
     add_image_size('prestations', 530, 350, true);
 }
 
-// Generate inline scripts and styles and attach them to the appropriate script handles.
-function my_inline_scripts(){
-    $image = get_header_image();
-
-    if (!$image) {
-        return;
-    }
-    wp_add_inline_style('style', ".headerimg { background-image: url(\"{$image}\");}");
-}
-add_action('wp_enqueue_scripts', 'my_inline_scripts');
-
 function slider_text_theme_site_info(){
     $name = get_bloginfo('name');
     $description = get_bloginfo('description');
@@ -78,9 +67,16 @@ function register_nav(){
         array(
             'header-menu' => __('Header Menu'), //Nom du menu : 'Header' dans BO (pour sub-menu.js)
             'subfooter-menu' => __('Footer Menu'),
-            'footer-menu' => __('Social Link Menu'), // Nom du menu : 'Réseaux sociaux' dans BO pour le style
+            'footer-menu' => __('Social Link Menu'), // Nom du menu : 'Social Link' dans BO pour le style
         )
     );
+}
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active-menu';
+     }
+     return $classes;
 }
 function cpt_slider_init(){
     $labels = array(

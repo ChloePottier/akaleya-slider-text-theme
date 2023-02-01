@@ -1,6 +1,7 @@
 window.onscroll = function() {
     stickyToScroll();
 }
+
 let navbar = document.getElementById('navbar');
 let navbarTop = document.getElementById('navbarTop');
 let sticky = navbar.offsetTop;
@@ -16,7 +17,6 @@ function stickyToScroll() {
         navbar.classList.remove('position-fixed');
     }
 }
-
 
 if (window.matchMedia('(min-width: 992px)').matches) {
     for(let subMenuItems of subMenu){
