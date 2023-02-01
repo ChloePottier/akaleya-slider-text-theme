@@ -1,13 +1,17 @@
 #logoprint{display: block;}
 .menu-top-md,#navbar .d-none{display: block!important;}
-#navbar,#navigation,#nav-burger,.custom-header,.custom-header-small,{display: none!important;}
- .home #masthead{display: block!important;}
- .text-shadow{text-shadow: none!important;}
+/* #navigation, */
+#nav-burger
+/* .custom-header-small */
+{display: none!important;}
+.home #masthead{display: block!important;}
+.text-shadow{text-shadow: none!important;}
 .menu a{color:#000;}
 .vh-100,.vh-30{height: auto!important;}
 #navbar{position: relative!important;background: #fff;}
 #navbar ul{padding-left: 0!important;}
 input[type='submit']{background: #c6c6c6;color:#fff;}
 button[type='submit']{visibility: hidden;}
+
 
 

@@ -4,33 +4,42 @@
  * @package akaleya-slider-text-theme 
  */
 get_header(); ?>
+</div>
+</header>
 <div id='primary' class='content-area container-fluid bg-white position-relative'>
-    <main id='main' class='site-main front-page container py-5' role='main'>
+    <article id='main' class='site-main single-prestation container py-5' role='main'>
     <?php if ( function_exists('yoast_breadcrumb') ) {
         yoast_breadcrumb( '<nav id="breadcrumbs" itemprop="breadcrumb" class="pb-3">','</nav>' );
         }
         if (have_posts()) :
-            while (have_posts()) : the_post(); ?>
-                <section class='row' id=''>
+            while (have_posts()) : the_post();?>
+                <section class='row' id='prestation-<?php echo $post->ID; ?>'>
                     <div class='col-12 pb-3'>
                         <h1><?php the_title(); ?></h1>
                     </div>
-                    <div class="col-12">
+                    <div class='col-12'>
                         <?php the_content(); ?> 
                     </div>
                 </section>
-                <div id='nav-faq' class='d-flex justify-content-between pt-5'>
-                    <div>
-                    <?php next_post_link('%link', '&lsaquo; %title'); ?>
-                    </div>
-                    <div>
-                    <?php previous_post_link('%link','%title &rsaquo;'); ?>
-                    </div>
-                </div>
+                <section  class='row mt-5'>
+                <?php $query = new WP_Query( array('post_type' => 'prestation', 'post_status' => 'publish', 'post_parent' => $post->ID, 'orderby'=> 'menu_order', 'order'=>'ASC') );
+                if($query->have_posts()):
+                    while ($query->have_posts()) : $query->the_post();?>
+                   <a href='<?php the_permalink();?>' class='col-12 col-md-6 col-lg-4 pb-5 d-block'>
+                   <div class='prestations-items'> 
+                    <?php the_post_thumbnail('', ['class' => 'responsive']);?>
+                    <h4 class='mt-3 pb-3'><?php the_title();?></h4>
+                    <?php if(has_excerpt()):
+                       echo '<p>' . the_excerpt() . '</p>';
+                    endif;
+                    echo '</div></a>';                    
+                     endwhile;
+                endif; ?>
+                </section>
     <?php endwhile;
         endif; 
         wp_reset_postdata();?>
-    </main>
+    </article>
 </div>
 <?php get_footer(); ?>
 

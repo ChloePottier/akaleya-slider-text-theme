@@ -9,5 +9,5 @@ remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 add_action('shutdown', function() {
    while (@ob_end_flush());
 });
-
 add_action('site_info', 'slider_text_theme_site_info');
+add_shortcode('prestationsLoop', 'prestations_loop_shortcode');
